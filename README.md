@@ -1,16 +1,80 @@
-# React + Vite
+# 🚌 BusLine — Live Bus Schedule
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A real-time bus schedule tracker for the **Inoli ↔ Mangalore** route, built with React + Vite.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- **Live Next Bus** — shows the current or upcoming bus with real-time countdown
+- **Smart Stop Finder** — pick your stop and get exact arrival time
+- **Full Schedule** — complete day schedule for all buses and trips
+- **Multi-trip support** — tracks buses that run multiple trips per day
+- **Bilingual** — full English and ಕನ್ನಡ (Kannada) support
+- **Live clock** — updates every second
+- **Auto-refresh** — schedule refreshes every 60 seconds
+- **Mobile friendly** — responsive design with bottom navigation
 
-## React Compiler
+## 🚏 Route
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Covers 17 stops from **Inoli** to **Mangalore (State Bank)**:
 
-## Expanding the ESLint configuration
+> Inoli → Malar → Gramachavadi → Konaje → Assaigoli → Natekal → Deralakatte → Yenepoya → Kuttar → Thokottu → Kallapu → Jappu → Pumpwell → Kankanady → Jyoti → Hampanakatte → State Bank
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚌 Buses
+
+| Bus | Trips per day |
+|---|---|
+| Durga Ganesh | 3 |
+| Karavali | 4 |
+| Akshaya | 2 |
+| Sarvani | 2 |
+| Sri Kateel | 3 |
+| Kalarahalli | 3 |
+
+## 🛠️ Tech Stack
+
+- [React 18](https://react.dev/)
+- [Vite](https://vitejs.dev/)
+- CSS (custom, no UI library)
+- Google Fonts — Syne + Space Mono
+
+## 🚀 Run Locally
+
+```bash
+npm install
+npm run dev
+```
+
+Open [http://localhost:5173](http://localhost:5173)
+
+## 📦 Deploy
+
+```bash
+npm run deploy
+```
+
+Deploys to GitHub Pages at `https://mfaizalf72.github.io/BusLine/`
+
+## 📁 Project Structure
+
+```
+src/
+├── components/
+│   ├── Header.jsx
+│   ├── DirectionTabs.jsx
+│   ├── NextBusCard.jsx
+│   ├── StopFinder.jsx
+│   ├── ScheduleTable.jsx
+│   └── BottomNav.jsx
+├── data/
+│   ├── busData.js        ← all bus schedules
+│   └── translations.js   ← English + Kannada strings
+├── utils/
+│   ├── timeUtils.js      ← time formatting helpers
+│   └── tripLogic.js      ← bus status logic
+├── App.jsx
+└── index.css
+```
+
+## 📄 License
+
+MIT — free to use and modify.
